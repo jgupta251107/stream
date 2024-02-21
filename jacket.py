@@ -1,40 +1,30 @@
-# import requests
+import streamlit as st
 
-# # ThingSpeak channel ID and API key
-# channel_id = 'your_channel_id'
-# api_key = 'your_api_key'
+# Title of the app
+st.title('My Streamlit App')
 
-# # URL for ThingSpeak API
-# url = f'https://api.thingspeak.com/channels/{channel_id}/feeds.json'
+# Add a header
+st.header('Welcome to my app!')
 
-# # Parameters for the API request
-# params = {
-#     'api_key': api_key,
-#     'results': 1  # Number of results to retrieve (change as needed)
-# }
+# Add some text
+st.write('This is a simple Streamlit app.')
 
-# # Send GET request to ThingSpeak API
-# response = requests.get(url, params=params)
+# Add a sidebar
+st.sidebar.header('Sidebar')
+st.sidebar.write('This is the sidebar.')
 
-# # Check if request was successful (status code 200)
-# if response.status_code == 200:
-#     data = response.json()
-    
-#     # Check if there are any feeds in the response
-#     if 'feeds' in data and len(data['feeds']) > 0:
-#         # Get the latest feed
-#         latest_feed = data['feeds'][0]
-        
-#         # Print the data
-#         print('Latest Data from ThingSpeak:')
-#         print('------------------------------')
-#         print('Entry ID:', latest_feed['entry_id'])
-#         print('Timestamp:', latest_feed['created_at'])
-#         print('Field 1:', latest_feed.get('field1'))
-        print('field2')
-        # Add more fields as needed
-        
-#     else:
-#         print('No feeds found in the response.')
-# else:
-#     print('Failed to retrieve data from ThingSpeak. Status code:', response.status_code)
+# Add a slider widget
+value = st.slider('Select a value', 0, 100, 50)
+
+# Display the selected value
+st.write(f'You selected: {value}')
+
+# Add a button
+if st.button('Click me'):
+    st.write('Button clicked!')
+
+# Add a file uploader
+file = st.file_uploader('Upload a file', type=['csv', 'txt'])
+if file is not None:
+    st.write('File uploaded successfully!')
+    st.write(file.read())  # Display file contents
