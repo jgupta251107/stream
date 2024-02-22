@@ -1,17 +1,17 @@
 import streamlit as st
 
 # Title of the app
-st.title('My Streamlit App')
+st.title('Posture dtection jacket')
 
 # Add a header
-st.header('Welcome to my app!')
+st.header('We'll break your backs!')
 
 # Add some text
-st.write('This is a simple Streamlit app.')
+st.write('Analysis for posture')
 
 # Add a sidebar
 st.sidebar.header('Sidebar')
-st.sidebar.write('This is the sidebar.')
+st.sidebar.write('sideBAR')
 
 # Add a slider widget
 value = st.slider('Select a value', 0, 100, 50)
