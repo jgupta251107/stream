@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Title of the app
-st.title('Posture dtection jacket')
+st.title('ESP32 jacket for posture')
 
 # Add a header
 st.header('We will crack your back!')
