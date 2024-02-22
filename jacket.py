@@ -4,7 +4,7 @@ import streamlit as st
 st.title('Posture dtection jacket')
 
 # Add a header
-st.header('We'll crack your back!')
+st.header('We will crack your back!')
 
 # Add some text
 st.write('Analysis for posture')
