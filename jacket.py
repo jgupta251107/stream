@@ -14,7 +14,7 @@ st.sidebar.header('Sidebar')
 st.sidebar.write('sideBAR')
 
 # Add a slider widget
-value = st.slider('Select a value', 0, 100, 50)
+value = st.slider('Select a value', 0, 100, 20)
 
 # Display the selected value
 st.write(f'You selected: {value}')
